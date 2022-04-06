@@ -13,3 +13,9 @@
 
 - Used to sort results by a chosen column
 - ORDER_BY DESC sort in descending order
+
+### WHERE
+
+- Used to filter result
+- Use all comparison operator
+  =, >=, <=, in [list],etc
