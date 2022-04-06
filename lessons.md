@@ -8,3 +8,8 @@
 
 - Used to Select columns
 - From a table
+
+### ORDER_BY
+
+- Used to sort results by a chosen column
+- ORDER_BY DESC sort in descending order
