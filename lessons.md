@@ -4,6 +4,15 @@
 
 ## Syntax
 
+```
+
+SELECT col_name_1, col_name_2, *
+FROM table_name
+WHERE col_name = row_value
+ORDER_BY col_name_1 DESC, col_name_2
+LIMIT 10
+```
+
 ### SELECT & FROM
 
 - Used to Select columns
@@ -19,3 +28,7 @@
 - Used to filter result
 - Use all comparison operator
   =, >=, <=, in [list],etc
+
+### LIMIT
+
+- Limits the number of output
