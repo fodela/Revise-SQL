@@ -27,8 +27,14 @@ LIMIT 10
 
 - Used to filter result
 - Use all comparison operator
-  =, >=, <=, in [list],etc
+  =, >=, <=, in [list],'nonnumeric_data',etc
 
 ### LIMIT
 
 - Limits the number of output
+
+## Functionalities
+
+### Derived Columns
+
+col_name_1 + col_name_2 AS new_col_name
