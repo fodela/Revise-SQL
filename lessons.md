@@ -38,3 +38,27 @@ LIMIT 10
 ### Derived Columns
 
 col_name_1 + col_name_2 AS new_col_name
+
+### Logical Operators
+
+- LIKE => This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
+- IN => This allows you to perform operations similar to using WHERE and =, but for more than one condition.
+- NOT => This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
+- AND & BETWEEN => These allow you to combine operations where all combined conditions must be true.
+- OR => This allows you to combine operations where at least one of the combined conditions must be true.
+
+### RegEx
+
+% => any character or any number of character
+e.g WHERE
+
+### Join
+
+- Used to join two or more tables
+
+```
+SELECT t1.col, t2.col
+FROM table_1 as t1
+JOIN table_2 as t2
+ON t1.col =t2.col
+```
