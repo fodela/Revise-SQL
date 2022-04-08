@@ -59,8 +59,13 @@ col_name_1 + col_name_2 AS new_col_name
 
 ### RegEx
 
-% => any character or any number of character
-e.g WHERE
+- Mostly used with LIKE
+  % => any character or any number of character
+  e.g WHERE any name that start with "C"
+
+```
+WHERE name LIKE 'C%'
+```
 
 ### Join
 
