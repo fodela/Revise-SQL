@@ -26,6 +26,7 @@ LIMIT 10
 ```
  SELECT DISTINCT(col_name)
  FROM table_name
+```
 
 ### ORDER_BY
 
@@ -74,4 +75,13 @@ ON t1.col =t2.col
 
 ```
 
+### COUNT
+
+- Answers how many rows are in a column or in a table
+- Can be combined with DISTINCT
+- It doesn't really matter which column you call it on it will be the same number of rows anyway
+
+```
+COUNT(col_name)
+COUNT(DISTINCT(col_name))
 ```
