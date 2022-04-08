@@ -33,39 +33,40 @@ LIMIT 10
 - Used to sort results by a chosen column
 - ORDER_BY DESC sort in descending order
 
-### WHERE
-
-- Used to filter result
-- Use all comparison operator
-  =, >=, <=, in [list],'nonnumeric_data',etc
-
 ### LIMIT
 
 - Limits the number of output
 
-## Functionalities
+### WHERE
 
-### Derived Columns
+- Used to filter result
+- Uses:
 
-col_name_1 + col_name_2 AS new_col_name
+  ### Derived Columns
 
-### Logical Operators
+  col_name_1 + col_name_2 AS new_col_name
 
-- LIKE => This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
-- IN => This allows you to perform operations similar to using WHERE and =, but for more than one condition.
-- NOT => This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
-- AND & BETWEEN => These allow you to combine operations where all combined conditions must be true.
-- OR => This allows you to combine operations where at least one of the combined conditions must be true.
+  ### Comparison Operators
 
-### RegEx
+  - =, <, >, <=, >=
 
-- Mostly used with LIKE
-  % => any character or any number of character
-  e.g WHERE any name that start with "C"
+  ### Logical Operators
 
-```
-WHERE name LIKE 'C%'
-```
+  - LIKE => This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
+  - IN => This allows you to perform operations similar to using WHERE and =, but for more than one condition.
+  - NOT => This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
+  - AND & BETWEEN => These allow you to combine operations where all combined conditions must be true.
+  - OR => This allows you to combine operations where at least one of the combined conditions must be true.
+
+  ### RegEx
+
+  - Mostly used with LIKE
+    % => any character or any number of character
+    e.g WHERE any name that start with "C"
+
+  ```
+  WHERE name LIKE 'C%'
+  ```
 
 ### Join
 
