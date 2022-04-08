@@ -28,10 +28,11 @@ LIMIT 10
  FROM table_name
 ```
 
-### ORDER_BY
+### ORDER BY
 
 - Used to sort results by a chosen column
-- ORDER_BY DESC sort in descending order
+- ORDER BY DESC sort in descending order
+- We use ASC or DESC
 
 ### LIMIT
 
@@ -40,6 +41,7 @@ LIMIT 10
 ### WHERE
 
 - Used to filter result
+  -NB: single quotes only for strings
 - Uses:
 
   ### Derived Columns
@@ -56,6 +58,17 @@ LIMIT 10
   - IN => This allows you to perform operations similar to using WHERE and =, but for more than one condition.
   - NOT => This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
   - AND & BETWEEN => These allow you to combine operations where all combined conditions must be true.
+
+    - value BETWEEN low AND high
+      Remember that it is low and high inclusive
+    - NB: for time stamps it only covers up to the start of the day 0:00 not 24:00 so that day will be excluded if it is the high. Hence call on the next day of the high as the high . Hope this makes sense LOL. 'with love, from me to FutureMe'
+
+    ```
+      WHERE col_name BETWEEN 1 AND 20
+
+      WHERE col_name NOT BETWEEN 1 AND 20
+    ```
+
   - OR => This allows you to combine operations where at least one of the combined conditions must be true.
 
   ### RegEx
