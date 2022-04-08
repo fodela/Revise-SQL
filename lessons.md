@@ -55,6 +55,7 @@ LIMIT 10
   ### Logical Operators
 
   - LIKE => This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
+    - LIKE is case sensitive while ILIKE is case insensitive.
   - IN => This allows you to perform operations similar to using WHERE and =, but for more than one condition.
   - NOT => This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
   - AND & BETWEEN => These allow you to combine operations where all combined conditions must be true.
@@ -80,6 +81,11 @@ LIMIT 10
   ```
   WHERE name LIKE 'C%'
   ```
+
+  - Underscore is used to replace mission characters
+    ```
+    WHERE name LIKE D_lali.
+    ```
 
 ### Join
 
