@@ -83,9 +83,42 @@ LIMIT 10
   ```
 
   - Underscore is used to replace mission characters
+
     ```
     WHERE name LIKE D_lali.
+
+
     ```
+
+## AGGREGATE Functions
+
+- Only occur in SELECT or HAVING clause
+- e.g
+  - AVG() return average as float that we can use ROUND() on.
+  - COUNT()
+  - MAX()
+  - MIN()
+  - SUM()
+- Return a single row and hence before other columns with larger number of row can be called we need the GROUP BY clause
+
+### COUNT
+
+- Answers how many rows are in a column or in a table
+- Can be combined with DISTINCT
+- It doesn't really matter which column you call it on it will be the same number of rows anyway
+
+```
+COUNT(col_name)
+COUNT(DISTINCT(col_name))
+
+```
+
+### ROUND
+
+ROUND(value_to_round, number_of_decimal_places)
+
+```
+ROUND(AVG(), 4)
 
 ### Join
 
@@ -100,13 +133,4 @@ ON t1.col =t2.col
 
 ```
 
-### COUNT
-
-- Answers how many rows are in a column or in a table
-- Can be combined with DISTINCT
-- It doesn't really matter which column you call it on it will be the same number of rows anyway
-
-```
-COUNT(col_name)
-COUNT(DISTINCT(col_name))
 ```
