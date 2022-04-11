@@ -149,19 +149,6 @@ GROUP BY customer_id
 
 NB: The above reads "sum of amount per customer_id"
 
-### Join
-
-- Used to join two or more tables
-
-```
-
-SELECT t1.col, t2.col
-FROM table_1 t1
-JOIN table_2 t2
-ON t1.col =t2.col
-
-```
-
 ### DATE
 
 is Used to convert timestamp to date
@@ -178,4 +165,35 @@ FROM payment
 GROUP BY customer_id
 HAVING SUM(amount) > 100
 
+```
+
+## Joins
+
+### AS
+
+Is used to create alias of tables and columns. An alias is an alternative name.
+
+AS is executed at the very end hence cannot be used in WHERE or HAVING
+
+```
+SELECT amount AS rental_price
+FROM payment AS p
+```
+
+NB: postgrel sql also allows us to give an alias without the use of AS. However the use of AS is a better pratice.
+
+```
+SELECT amount rental_price
+FROM payment p
+
+```
+
+- Used to join two or more tables
+
+```
+
+SELECT t1.col, t2.col
+FROM table_1 t1
+JOIN table_2 t2
+ON t1.col =t2.col
 ```
