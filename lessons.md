@@ -133,7 +133,7 @@ Thus we can get the sum, average etc of object based on their categories
 - Place directly after
 - Usually after a WHERE statement to enable conditional output of results. Remember code here are also executed top to down
 - If we are selecting a categorical column, it must appear in the group by state. The column on which the aggregate function is perform does not appear in the group by statement
-- We can group by multiple categorical columns
+- We can group by multiple categorical columns. But note that the order in which we group by is important event though the order in which we display or select them does not.
 - WHERE cannot be used on the aggregated column that is what we use HAVING for.
 - ORDER BY must contain the whole aggregate statement e.g ORDER BY SUM(sales) not ORDER BY SUM(sales).
 
@@ -141,7 +141,13 @@ Thus we can get the sum, average etc of object based on their categories
 SELECT category_col, AGG(data_col)
 FROM table
 GROUP BY category_col
+
+SELECT customer_id, SUM(amount)
+FROM payment
+GROUP BY customer_id
 ```
+
+NB: The above reads "sum of amount per customer_id"
 
 ### Join
 
