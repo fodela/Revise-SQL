@@ -119,6 +119,29 @@ ROUND(value_to_round, number_of_decimal_places)
 
 ```
 ROUND(AVG(), 4)
+```
+
+### GROUP BY
+
+Allows us to aggregate columns per some category
+Thus we can get the sum, average etc of object based on their categories
+
+- We choose a categorical column to group by.
+
+  - Categorical columns are non-continuous (NB: they can still be numerical as in Class 1,2,3 for e.g)
+
+- Place directly after
+- Usually after a WHERE statement to enable conditional output of results. Remember code here are also executed top to down
+- If we are selecting a categorical column, it must appear in the group by state. The column on which the aggregate function is perform does not appear in the group by statement
+- We can group by multiple categorical columns
+- WHERE cannot be used on the aggregated column that is what we use HAVING for.
+- ORDER BY must contain the whole aggregate statement e.g ORDER BY SUM(sales) not ORDER BY SUM(sales).
+
+```
+SELECT category_col, AGG(data_col)
+FROM table
+GROUP BY category_col
+```
 
 ### Join
 
@@ -133,4 +156,6 @@ ON t1.col =t2.col
 
 ```
 
-```
+### DATE
+
+is Used to convert timestamp to date
