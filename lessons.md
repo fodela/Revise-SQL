@@ -165,3 +165,17 @@ ON t1.col =t2.col
 ### DATE
 
 is Used to convert timestamp to date
+
+### Having
+
+- Enables us to filter after the group by clause have been executed
+- Hence it comes after the group by clause
+
+```
+-- Which customers have paid more than $100
+SELECT customer_id SUM(amount)
+FROM payment
+GROUP BY customer_id
+HAVING SUM(amount) > 100
+
+```
