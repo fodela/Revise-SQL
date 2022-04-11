@@ -169,6 +169,8 @@ HAVING SUM(amount) > 100
 
 ## Joins
 
+- Used to join two or more tables
+
 ### AS
 
 Is used to create alias of tables and columns. An alias is an alternative name.
@@ -188,12 +190,15 @@ FROM payment p
 
 ```
 
-- Used to join two or more tables
+### Inner join
+
+- Used to join two or more tables using data that is similar in both table
+- It return only the common row in the two elements. Is symmetrical => does not matter if we say A join B or B join A
+- Inner join is the default join hence we can just write join instead of inner join.
 
 ```
-
 SELECT t1.col, t2.col
 FROM table_1 t1
-JOIN table_2 t2
+INNER JOIN table_2 t2
 ON t1.col =t2.col
 ```
