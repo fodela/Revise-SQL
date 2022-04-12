@@ -244,3 +244,13 @@ FROM table1 AS t1
 RIGHT OUTER JOIN table2 AS t2
 ON t1.col = t2.col
 ```
+
+### RIGHT OUTER ONLY
+
+```
+SELECT t1.col , t2.col
+FROM table1 AS t1
+RIGHT OUTER JOIN table2 AS t2
+ON t1.col = t2.col
+WHERE t1 IS null
+```
