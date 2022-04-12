@@ -235,3 +235,12 @@ LEFT OUTER JOIN table2 AS t2
 ON t1.col = t2.col
 WHERE t2 IS null
 ```
+
+### RIGHT OUTER JOIN
+
+```
+SELECT t1.col , t2.col
+FROM table1 AS t1
+RIGHT OUTER JOIN table2 AS t2
+ON t1.col = t2.col
+```
