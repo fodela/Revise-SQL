@@ -254,3 +254,13 @@ RIGHT OUTER JOIN table2 AS t2
 ON t1.col = t2.col
 WHERE t1 IS null
 ```
+
+### UNION
+
+-Concat the result of two select statement together
+
+```
+SELECT * FROM t1
+UNION
+SELECT * FROM t2
+```
