@@ -224,3 +224,12 @@ FROM table1 AS t1
 FULL OUTER JOIN table2 AS t2
 ON t1.col = t2.col
 ```
+
+-Can be used to return only the data in table 1 and table 2 only using WHERE
+
+```
+SELECT t1.col , t2.col
+FROM table1 AS t1
+FULL OUTER JOIN table2 AS t2
+ON t1.col != t2.col
+```
