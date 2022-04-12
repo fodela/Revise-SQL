@@ -202,3 +202,25 @@ FROM table_1 t1
 INNER JOIN table_2 t2
 ON t1.col =t2.col
 ```
+
+### OUTER JOINs
+
+Types
+
+- FULL OUTER JOIN
+- LEFT OUTER JOIN
+- RIGHT OUTER JOIN
+
+They can be written without the outer thus full join or left join for example.
+
+### FULL OUTER JOIN
+
+- It takes the union of both tables thus it takes everything from both tables.
+- Is also symmetrical
+
+```
+SELECT t1.col , t2.col
+FROM table1 AS t1
+FULL OUTER JOIN table2 AS t2
+ON t1.col = t2.col
+```
