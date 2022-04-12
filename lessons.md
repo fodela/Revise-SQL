@@ -211,3 +211,15 @@ FULL OUTER JOIN table2 AS t2
 ON t1.col != t2.col
 WHERE t1 IS null AND t2 IS null
 ```
+
+### LEFT OUTER JOIN
+
+- It return all of the first table plus info that are common to both table
+- Is not symmetrical and hence table sequence do matter
+
+```
+SELECT t1.col , t2.col
+FROM table1 AS t1
+LEFT OUTER JOIN table2 AS t2
+ON t1.col = t2.col
+```
