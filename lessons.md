@@ -278,3 +278,19 @@ SELECT * FROM t2
 * TIMESTAMPTZ => Contains date, time and timezone
 
 - When creating a database carefully consider what time data type you actually need. Think long term. NB: It is better to have data you don't need than not have data that you need.
+
+### Time Functions and Operations
+
+- TIMEZONE => display current timezone
+- NOW() => display current time as a timestamptz
+- TIMEOFDAY() => display current timestamp as a string
+- CURRENT_TIME() => display current time only as a string
+- CURRENT_DATE() => display current date only as a string
+
+```
+SHOW TIMEZONE()
+
+SELECT NOW()
+
+SELECT CURRENT_DATE()
+```
