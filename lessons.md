@@ -323,6 +323,17 @@ AGE(date_col)
 Is a general function that convert data types to text
 Is useful for timestamp formatting
 
+- check documentation for various ways of formatting timestamp
+
 ```
 TO_CHAR(date_col, 'mm-dd-yy')
+```
+
+## Mathematical Functions and Operators
+
+Enable us to do mathematical operations between table
+
+```
+SELECT (col1 / col2) * 100 AS percent cost
+FROM table
 ```

@@ -50,3 +50,12 @@ ON actor.pk = film.fk
 JOIN film_actor
 ON actor.pk = film_actor.fk
 WHERE actor.first_name = 'Nick' AND actor.last_name = Wahlberg
+
+-- Find months in which payments occured
+SELECT DISTICT(TO_CHAR(payment_date, "MONTH"))
+FROM payment 
+
+-- How many payments occured on a Monday
+SELECT  COUNT(*)
+FROM payment
+WHERE EXTRACT(dow FROM payment_date) = 1
