@@ -295,7 +295,7 @@ SELECT NOW()
 SELECT CURRENT_DATE()
 ```
 
-### EXTRACT
+### EXTRACT()
 
 - Allows us to extract or obtain a sub-component of a date value such as
   - YEAR
@@ -306,4 +306,12 @@ SELECT CURRENT_DATE()
 
 ```
 EXTRACT(YEAR FROM date_col)
+```
+
+### AGE()
+
+Calculates and returns the current from a given timestamp
+
+```
+AGE(date_col)
 ```
