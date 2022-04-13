@@ -264,3 +264,17 @@ SELECT * FROM t1
 UNION
 SELECT * FROM t2
 ```
+
+## Advanced SQL Commands
+
+### Displaying current time information
+
+- Useful when creating our own databases
+  Time Data Types
+
+* TIME => Contains only time
+* DATE => Contains only date
+* TIMESTAMP => Contains date and time
+* TIMESTAMPTZ => Contains date, time and timezone
+
+- When creating a database carefully consider what time data type you actually need. Think long term. NB: It is better to have data you don't need than not have data that you need.

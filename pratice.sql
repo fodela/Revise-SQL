@@ -31,3 +31,22 @@ FROM payment
 WHERE staff_id = 2
 GROUP BY customer_id
 HAVING SUM(amount) >= 100 
+
+-- JOIN
+
+-- What are the emails of the customer who lives in california
+
+SELECT district , email
+FROM customer
+INNER JOIN address
+ON customer.customer_id = address.customer.id
+WHERE district = 'california'
+
+-- Find all Nick Wahlberg
+SELECT f.title, fa.first_name, last_name
+FROM film f
+JOIN actor
+ON actor.pk = film.fk
+JOIN film_actor
+ON actor.pk = film_actor.fk
+WHERE actor.first_name = 'Nick' AND actor.last_name = Wahlberg
