@@ -311,7 +311,18 @@ EXTRACT(YEAR FROM date_col)
 ### AGE()
 
 Calculates and returns the current from a given timestamp
+returns => e.g 13 years 1 month 5 days
 
 ```
 AGE(date_col)
+
+```
+
+### TO_CHAR()
+
+Is a general function that convert data types to text
+Is useful for timestamp formatting
+
+```
+TO_CHAR(date_col, 'mm-dd-yy')
 ```
