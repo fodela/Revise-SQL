@@ -294,3 +294,16 @@ SELECT NOW()
 
 SELECT CURRENT_DATE()
 ```
+
+### EXTRACT
+
+- Allows us to extract or obtain a sub-component of a date value such as
+  - YEAR
+  - MONTH
+  - DAY
+  - WEEK
+  - QUARTER
+
+```
+EXTRACT(YEAR FROM date_col)
+```
